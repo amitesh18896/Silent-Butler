@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".module.backgroundservice.BackgroundServiceFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/fab_margin">
+
+        <Button
+            android:id="@+id/btn_background_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Start service"
+            app:layout_constraintEnd_toStartOf="@+id/btn_background_stop"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_background_stop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Stop service"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_background_start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btn_background_start"
+            app:layout_constraintTop_toTopOf="@+id/btn_background_start" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:text="By default a service runs on main thread and it is capable of running in background even when the application is killed.\nIn android oreo and above if service is started on Mainthread then it will be automatically killed by the system after few seconds\nIf the service is started on a new thread then it will be destroyed as soon as the application is killed."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_background_start" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
